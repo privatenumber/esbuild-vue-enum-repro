@@ -32,9 +32,17 @@ I believe esbuild ignores the Typescript `declare` syntax, but the run-time erro
 4. See esbuild dist is not working: `node dist-esbuild`
 
 I wanted to use Vue to demonstrate this is something happening in a popular library but this is a more minimal reproduction of the problem:
+
+#### Src
 ```ts
 declare const enum NodeTypes {
     ELEMENT = 1,
 }
+console.log(NodeTypes.ELEMENT);
+```
+
+#### Dist
+```js
+// src/index.ts
 console.log(NodeTypes.ELEMENT);
 ```
