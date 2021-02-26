@@ -30,3 +30,11 @@ I believe esbuild ignores the Typescript `declare` syntax, but the run-time erro
 2. Produce Typescript and Esbuild builds to compare: `npm run build`
 3. Test Typescript dist is working: `node dist-ts`
 4. See esbuild dist is not working: `node dist-esbuild`
+
+I wanted to use Vue to demonstrate this is something happening in a popular library but this is a more minimal reproduction of the problem:
+```ts
+declare const enum NodeTypes {
+    ELEMENT = 1,
+}
+console.log(NodeTypes.ELEMENT);
+```

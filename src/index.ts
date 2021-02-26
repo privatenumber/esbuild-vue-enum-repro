@@ -1,3 +1,4 @@
-import { NodeTypes } from '@vue/compiler-core';
-
+declare const enum NodeTypes {
+    ELEMENT = 1,
+}
 console.log(NodeTypes.ELEMENT);
